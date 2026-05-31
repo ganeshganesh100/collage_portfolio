@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio — Your Name</title>
+<title>Portfolio — Ganesh</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -40,7 +40,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23noise)' /%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 9999;
     opacity: 0.4;
@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2rem 5%;
+    padding: 1rem 5%;
     background: rgba(10,10,10,0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
@@ -63,7 +63,7 @@
   .nav-logo {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     letter-spacing: -0.02em;
     color: var(--yellow);
     text-decoration: none;
@@ -93,7 +93,6 @@
     padding: 0.45rem 1.1rem;
     border-radius: 100px;
     font-weight: 600 !important;
-    color: #000;
     transition: transform 0.2s, box-shadow 0.2s !important;
   }
 
@@ -127,21 +126,21 @@
   .mobile-menu {
     display: none;
     position: fixed;
-    top: 65px; left: 0; right: 0;
+    top: 60px; left: 0; right: 0;
     background: rgba(10,10,10,0.97);
     backdrop-filter: blur(12px);
-    padding: 2rem 5%;
+    padding: 1.5rem 5%;
     border-bottom: 1px solid var(--border);
     z-index: 99;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
     color: var(--white);
     text-decoration: none;
     font-family: var(--font-display);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     transition: color 0.2s;
   }
@@ -152,7 +151,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 8rem 5% 5rem;
+    padding: 7rem 5% 3rem;
     position: relative;
     overflow: hidden;
   }
@@ -212,7 +211,7 @@
 
   .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 7rem);
+    font-size: clamp(2.5rem, 8vw, 7rem);
     font-weight: 800;
     line-height: 1;
     letter-spacing: -0.03em;
@@ -229,7 +228,7 @@
   .hero-title .accent { color: var(--yellow); }
 
   .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
     color: var(--muted);
     max-width: 520px;
     margin-bottom: 2.5rem;
@@ -257,7 +256,7 @@
     color: #000;
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     padding: 0.9rem 2rem;
     border-radius: 100px;
     text-decoration: none;
@@ -277,7 +276,7 @@
     color: var(--white);
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     padding: 0.9rem 2rem;
     border-radius: 100px;
     text-decoration: none;
@@ -331,7 +330,7 @@
 
   .section-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     margin-bottom: 1rem;
@@ -342,6 +341,7 @@
     max-width: 520px;
     font-weight: 300;
     margin-bottom: 3.5rem;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
   }
 
   /* ── ABOUT ── */
@@ -374,7 +374,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
-    font-size: 5rem;
+    font-size: clamp(3rem, 10vw, 5rem);
   }
 
   .about-image::after {
@@ -397,7 +397,7 @@
 
   .about-text h3 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     font-weight: 700;
     margin-bottom: 1rem;
   }
@@ -407,6 +407,7 @@
     margin-bottom: 1rem;
     font-weight: 300;
     line-height: 1.8;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
   }
 
   .about-stats {
@@ -420,13 +421,13 @@
 
   .stat-num {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 800;
     color: var(--yellow);
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     color: var(--muted);
     margin-top: 0.2rem;
   }
@@ -444,7 +445,7 @@
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 1.8rem;
+    padding: clamp(1.5rem, 2vw, 1.8rem);
     transition: transform 0.2s, border-color 0.2s;
     position: relative;
     overflow: hidden;
@@ -465,19 +466,19 @@
   .skill-card:hover::before { transform: scaleX(1); }
 
   .skill-icon {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
     margin-bottom: 1rem;
   }
 
   .skill-card h4 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
   .skill-card p {
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1vw, 0.85rem);
     color: var(--muted);
     line-height: 1.7;
   }
@@ -524,13 +525,13 @@
   }
 
   .project-thumb {
-    height: 200px;
+    height: clamp(150px, 25vw, 200px);
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
   }
 
   .project-thumb .thumb-bg {
@@ -542,10 +543,10 @@
 
   .project-card:hover .thumb-bg { opacity: 0.25; }
 
-  .project-body { padding: 1.5rem; }
+  .project-body { padding: clamp(1.2rem, 2vw, 1.5rem); }
 
   .project-num {
-    font-size: 0.7rem;
+    font-size: clamp(0.65rem, 1vw, 0.7rem);
     letter-spacing: 0.12em;
     color: var(--muted);
     text-transform: uppercase;
@@ -554,13 +555,13 @@
 
   .project-body h3 {
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
 
   .project-body p {
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1vw, 0.85rem);
     color: var(--muted);
     margin-bottom: 1rem;
     line-height: 1.7;
@@ -625,7 +626,7 @@
   .timeline-item:hover .timeline-dot { background: var(--yellow); }
 
   .timeline-date {
-    font-size: 0.75rem;
+    font-size: clamp(0.7rem, 1vw, 0.75rem);
     color: var(--pink);
     font-weight: 600;
     letter-spacing: 0.1em;
@@ -635,20 +636,20 @@
 
   .timeline-item h3 {
     font-family: var(--font-display);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
     font-weight: 700;
     margin-bottom: 0.2rem;
   }
 
   .timeline-company {
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1.2vw, 0.85rem);
     color: var(--cyan);
     margin-bottom: 0.75rem;
     font-weight: 500;
   }
 
   .timeline-item p {
-    font-size: 0.88rem;
+    font-size: clamp(0.85rem, 1.2vw, 0.88rem);
     color: var(--muted);
     line-height: 1.8;
   }
@@ -703,7 +704,7 @@
     border-radius: 100px;
     text-decoration: none;
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: clamp(0.8rem, 1vw, 0.85rem);
     font-weight: 500;
     transition: color 0.2s, border-color 0.2s, background 0.2s;
   }
@@ -738,26 +739,119 @@
     font-size: 1rem;
   }
 
-  /* ── RESPONSIVE ── */
+  /* ── RESPONSIVE BREAKPOINTS ── */
+  
+  /* TABLET: 769px - 1024px */
+  @media (max-width: 1024px) {
+    section { padding: 5rem 4%; }
+    
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .blob-1 { width: 400px; height: 400px; }
+    .blob-2 { width: 280px; height: 280px; }
+    .blob-3 { width: 220px; height: 220px; }
+  }
+
+  /* TABLET: 768px */
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .hamburger { display: flex; }
 
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    section { padding: 4rem 4%; }
+
+    .about-grid { 
+      grid-template-columns: 1fr; 
+      gap: 2.5rem; 
+    }
     .about-image { aspect-ratio: 4/3; }
+    .about-deco { bottom: -12px; right: -12px; }
 
     .projects-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
 
-    .about-stats { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .about-stats { 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 1rem; 
+    }
 
-    section { padding: 4rem 5%; }
-    footer { flex-direction: column; text-align: center; }
+    #hero { padding: 6rem 4% 3rem; }
+    
+    .blob-1 { width: 300px; height: 300px; top: -20%; right: -20%; }
+    .blob-2 { width: 250px; height: 250px; left: -20%; }
+    .blob-3 { width: 180px; height: 180px; top: 30%; left: 25%; }
+
+    footer { 
+      flex-direction: column; 
+      text-align: center; 
+    }
   }
 
-  @media (max-width: 480px) {
-    .about-stats { grid-template-columns: 1fr 1fr; }
+  /* MOBILE: 481px - 767px */
+  @media (max-width: 767px) and (min-width: 481px) {
+    .about-stats { 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 0.8rem; 
+    }
     .stat-num { font-size: 1.5rem; }
+    .stat-label { font-size: 0.75rem; }
+
+    .timeline-item { padding-left: 2.5rem; }
+  }
+
+  /* MOBILE: max 480px */
+  @media (max-width: 480px) {
+    section { padding: 3rem 4%; }
+    nav { padding: 0.8rem 4%; }
+    
+    .nav-logo { font-size: 1rem; }
+    
+    .mobile-menu {
+      padding: 1rem 4%;
+      gap: 0.8rem;
+    }
+    .mobile-menu a { font-size: 1rem; }
+
+    #hero { 
+      padding: 5rem 4% 2rem;
+      min-height: auto;
+    }
+
+    .hero-scroll { display: none; }
+
+    .about-grid { gap: 2rem; }
+    .about-deco { bottom: -10px; right: -10px; }
+
+    .about-stats { 
+      grid-template-columns: 1fr 1fr; 
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+    }
+    
+    .stat-num { font-size: 1.3rem; }
+    .stat-label { font-size: 0.7rem; }
+
+    .project-thumb { height: 150px; }
+    .project-body { padding: 1rem; }
+
+    .timeline-item { 
+      padding-left: 2rem; 
+      padding-bottom: 2rem;
+    }
+
+    .timeline-dot { 
+      width: 12px; 
+      height: 12px; 
+      top: 4px;
+    }
+
+    .timeline::before { margin-left: 5px; }
+
+    .socials { gap: 0.7rem; }
+    .social-btn { padding: 0.5rem 1rem; }
+
+    footer { padding: 1rem 4%; }
   }
 
   /* ── SCROLL REVEAL ── */
@@ -776,7 +870,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#hero" class="nav-logo">Portfolio .</a>
+  <a href="#hero" class="nav-logo">Ganesh</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -805,13 +899,9 @@
     <div class="blob blob-3"></div>
   </div>
   <div class="hero-content">
-    <!-- <div class="hero-tag">
-      <span class="dot"></span>
-      Available for work
-    </div> -->
     <h1 class="hero-title">
-      Hello ,<br>
-      <span class="line-2">I am a  <span class="accent">DEVELOPER.</span></span>
+      Hello,<br>
+      <span class="line-2">I am a <span class="accent">DEVELOPER.</span></span>
     </h1>
     <p class="hero-sub">
       I craft bold, meaningful experiences at the intersection of design and technology. Based in Kathmandu, working worldwide.
@@ -835,13 +925,13 @@
   <div class="about-grid">
     <div class="about-image-wrap reveal">
       <div class="about-image">
-        <div class="about-image-placeholder">🙂<img src="/hello.png" alt=""></div>
+        <div class="about-image-placeholder">🙂</div>
       </div>
       <div class="about-deco"></div>
     </div>
     <div class="about-text reveal">
       <div class="section-label">About Me</div>
-      <h2 class="section-title">Hello , It <br>Me  Ganesh.</h2>
+      <h2 class="section-title">Hello, I'm Ganesh.</h2>
       <p>Hi! I'm a developer — a passionate creative professional with a love for crafting experiences that are both beautiful and purposeful. I believe great work starts with curiosity and ends with impact.</p>
       <p>When I'm not working, you'll find me exploring the streets of Kathmandu, experimenting with new ideas, or collaborating with fellow creatives across the globe.</p>
       <div class="about-stats">
@@ -936,7 +1026,7 @@
 <section id="projects">
   <div class="section-label reveal">Portfolio</div>
   <h2 class="section-title reveal">Selected Work</h2>
-  <p class="section-sub reveal">A few projects I'm proud of. Replace these with your own.</p>
+  <p class="section-sub reveal">A few projects I'm proud of.</p>
 
   <div class="projects-grid">
 
@@ -1009,74 +1099,56 @@
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-label reveal">Career</div>
+  <div class="section-label reveal">Career Path</div>
   <h2 class="section-title reveal">Experience</h2>
-  <p class="section-sub reveal">My professional journey so far.</p>
+  <p class="section-sub reveal">A timeline of my professional journey.</p>
 
-  <div class="timeline">
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
+  <div class="timeline reveal">
+    <div class="timeline-item">
       <div class="timeline-date">2023 — Present</div>
-      <h3>Senior Creative Lead</h3>
-      <div class="timeline-company">Company Name</div>
-      <p>Led a team of designers and strategists to deliver brand-defining campaigns for clients across multiple industries. Drove a 40% increase in engagement through redesigned digital experiences.</p>
+      <h3>Senior Developer</h3>
+      <div class="timeline-company">Creative Studio</div>
+      <p>Leading web development projects, mentoring junior developers, and architecting scalable solutions for diverse clients across multiple industries.</p>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
+    <div class="timeline-item">
       <div class="timeline-date">2021 — 2023</div>
-      <h3>Mid-level Designer / Developer</h3>
-      <div class="timeline-company">Another Company</div>
-      <p>Collaborated closely with product and engineering teams to ship user-centered features. Spearheaded the design system that reduced design debt by 60%.</p>
+      <h3>Full Stack Developer</h3>
+      <div class="timeline-company">Digital Agency</div>
+      <p>Developed and maintained web applications, collaborated with designers and product managers, and implemented responsive interfaces for various clients.</p>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
+    <div class="timeline-item">
       <div class="timeline-date">2019 — 2021</div>
-      <h3>Junior Creative</h3>
-      <div class="timeline-company">First Company</div>
-      <p>Started my career building digital assets and learning the fundamentals of great design, clear communication, and client collaboration.</p>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-date">2015 — 2019</div>
-      <h3> BCSIT</h3>
-      <div class="timeline-company">Pokhara University</div>
-      <p>Studied the foundations of my field. Active in student organizations, hackathons, and independent projects that shaped my professional style.</p>
+      <h3>Junior Developer</h3>
+      <div class="timeline-company">Tech Startup</div>
+      <p>Started my journey with front-end development, learned best practices, and contributed to multiple product launches and feature implementations.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-inner">
-    <div class="section-label reveal">Let's Talk</div>
-    <h2 class="section-title reveal">Got a project<br>in mind?</h2>
-    <p class="section-sub reveal">I'm always open to new opportunities, collaborations, or just a good conversation. Drop me a line.</p>
-    <a href="mailto:hello@yourname.com" class="contact-email reveal">ganeshdevkota977@gmail.com</a>
-    <div class="socials reveal">
-      <a href="#" class="social-btn">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        
-      </a>
-      <a href="https://github.com/ganeshganesh100/collageProject1" class="social-btn">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-  
-      </a>
-      <a href="#" class="social-btn">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-        
-      </a>
+  <div class="contact-inner reveal">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-sub">Have a project in mind? Reach out and let's create something amazing.</p>
+    <a href="mailto:your.email@example.com" class="contact-email">your.email@example.com</a>
+    <div class="socials">
+      <a href="https://twitter.com" class="social-btn" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://linkedin.com" class="social-btn" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com" class="social-btn" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://dribbble.com" class="social-btn" target="_blank" rel="noopener">Dribbble</a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <a href="#hero" class="footer-logo">Portfolio.</a>
-  <p>© 2026 Ganesh Devkota. All rights reserved.</p>
-  <p>Made with ❤️ in Kathmandu</p>
+  <p>&copy; 2024 Ganesh. All rights reserved.</p>
+  <a href="#hero" class="footer-logo">Ganesh</a>
 </footer>
 
 <script>
-  // Hamburger
+  // Mobile menu toggle
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
 
@@ -1090,34 +1162,24 @@
     mobileMenu.classList.remove('open');
   }
 
-  // Scroll reveal
+  // Scroll reveal animation
   const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 80);
-        observer.unobserve(entry.target);
+
+  function reveal() {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop < windowHeight - elementVisible) {
+        el.classList.add('visible');
       }
     });
-  }, { threshold: 0.12 });
+  }
 
-  reveals.forEach(el => observer.observe(el));
-
-  // Smooth nav highlight
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(link => {
-      link.style.color = link.getAttribute('href') === '#' + current ? 'var(--white)' : '';
-    });
-  });
+  window.addEventListener('scroll', reveal);
+  reveal();
 </script>
+
 </body>
 </html>
