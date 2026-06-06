@@ -219,7 +219,7 @@ setTimeout(() => {
   inputLine.className = 'terminal-line';
   inputLine.innerHTML = `
     <span class="prompt">ganesh@portfolio ~ % </span>
-    <input type="text" id="terminalInput" style="background: none; border: none; color: var(--fg); font-family: 'JetBrains Mono', monospace; font-size: 14px; outline: none; width: 300px;" placeholder="type 'help' for commands...">
+    <input type="text" id="terminalInput" style="background: none; border: none; color: var(--fg); font-family: 'JetBrains Mono', monospace; font-size: 14px; outline: none; width: 300px;" placeholder="type 'help' for commands">
     <span class="typing-cursor"></span>
   `;
   terminal.appendChild(inputLine);
@@ -231,17 +231,22 @@ setTimeout(() => {
       if (e.key === 'Enter') {
         const cmd = input.value.toLowerCase().trim();
         if (cmd === 'help') {
-          const helpText = `Available commands:
+          const helpLine = document.createElement('div');
+          helpLine.className = 'terminal-line';
+          const helpContent = document.createElement('div');
+          helpContent.className = 'output info';
+          helpContent.style.whiteSpace = 'pre-wrap';
+          helpContent.style.fontFamily = "'JetBrains Mono', monospace";
+          helpContent.textContent = `Available commands:
   about           - Learn about Ganesh
   skills          - View technical skills
   projects        - See featured projects
   experience      - View work experience
   contact         - Get contact information
   clear           - Clear terminal`;
-          const helpLine = document.createElement('div');
-          helpLine.className = 'terminal-line';
-          helpLine.innerHTML = `<div class="output info">${helpText}</div>`;
+          helpLine.appendChild(helpContent);
           terminal.appendChild(helpLine);
+          window.scrollTo(0, document.body.scrollHeight);
         }
         input.value = '';
       }
